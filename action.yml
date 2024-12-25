@@ -237,6 +237,40 @@ runs:
         sudo rm -rf /opt/ghc
         sudo rm -rf "/usr/local/share/boost"
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        sudo rm -rf /opt/ghc
+        sudo rm -rf /usr/local/.ghcup
+        sudo rm -rf /usr/local/lib/android
+        sudo rm -rf /opt/hostedtoolcache/CodeQL
+        sudo rm -rf /usr/local/aws-sam-cil
+        sudo rm -rf /usr/local/julia*
+        sudo rm -rf /usr/local/bin/oc
+        sudo rm -rf /usr/local/share/chromium
+        sudo rm -rf /usr/local/share/powershell
+        sudo rm -rf /usr/local/lib/heroku
+        sudo rm -rf /usr/local/lib/node_modules
+        sudo rm -rf /opt/az
+        sudo rm -rf /opt/microsoft/powershell
+        sudo rm -rf /opt/hostedtoolcache/go
+        sudo rm -rf /opt/hostedtoolcache/PyPy
+        sudo rm -rf /opt/hostedtoolcache/node
+        sudo rm -rf /usr/local/bin/aliyun
+        sudo rm -rf /usr/local/bin/azcopy
+        sudo rm -rf /usr/local/bin/bicep
+        sudo rm -rf /usr/local/bin/cmake-gui
+        sudo rm -rf /usr/local/bin/cpack
+        sudo rm -rf /usr/local/bin/helm
+        sudo rm -rf /usr/local/bin/hub
+        sudo rm -rf /usr/local/bin/kubectl
+        sudo rm -rf /usr/local/bin/minikube
+        sudo rm -rf /usr/local/bin/node
+        sudo rm -rf /usr/local/bin/packer
+        sudo rm -rf /usr/local/bin/pulumi*
+        sudo rm -rf /usr/local/bin/sam
+        sudo rm -rf /usr/local/bin/stack
+        sudo rm -rf /usr/local/bin/terraform
+        sudo apt purge -y firefox google-chrome-stable microsoft-edge-stable
+        sudo docker image prune --all --force
+        sudo docker builder prune -a
     - id: image-build
       shell: bash
       env:
