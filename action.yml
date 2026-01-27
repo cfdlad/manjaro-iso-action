@@ -286,6 +286,7 @@ runs:
         sudo apt-get remove -y google-cloud-cli --fix-missing || echo "::debug::The command [sudo apt-get remove -y google-cloud-cli --fix-missing] failed to complete successfully. Proceeding..."
         sudo apt-get autoremove -y || echo "::warning::The command [sudo apt-get autoremove -y] failed to complete successfully. Proceeding..."
         sudo apt-get clean || echo "::warning::The command [sudo apt-get clean] failed to complete successfully. Proceeding..."
+        sudo rm -rf /opt/microsoft /opt/google
         sudo docker image prune --all --force
         sudo docker builder prune -a
         sudo swapoff -a || true
